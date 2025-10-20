@@ -1,0 +1,10 @@
+#intro img{
+    width: 10rem;
+    border-radius: 30%;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem auto auto auto;
+}
