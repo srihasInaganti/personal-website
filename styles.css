@@ -1,47 +1,60 @@
 body {
-    background-image: linear-gradient(to top,#0D1F22, #2892D7);
-    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to top, #0D1F22, #2892D7);
+    font-family: 'Gill Sans', Courier, monospace;
     color: #E5F4E3;
+    text-align: center;
 }
 
 hr {
-    margin: 5rem;
+    margin: 2rem auto;
+    width: 50%;
+    color: #E5F4E3;
+    border-radius: 100%;
 }
-#intro img{
-    width: 25rem;
-    border-radius: 30%;
+
+a {
+    font-family: 'Gill Sans', Courier, monospace;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E5F4E3;
+    cursor: pointer;
 }
 
 #intro {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-h2 {
-    display: flex;
-    justify-content: center;
+#intro h1 {
+    margin-left: 5rem;
+}
+
+#intro img {
+    width: 25rem;
+    border-radius: 10%;
+    border: 0.5rem groove #0D1F22;
 }
 
 #experience-list, #hobby-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
-.experience-info h3, .hobby-info h4{
-    display: flex;
-    justify-content: space-around;
+.hobby-info, .experience-info {
+    width: 20rem;
 }
 
-.experience-info p, .hobby-info p {
-    display: flex;
-    justify-content: space-around;
+.hobby-info h4, .experience-info h3 {
+    margin-bottom: 1rem;
 }
 
-#hobby-list h3 {
-    display: flex;
-    justify-content: center;
-}
-#about {
-
+#about p {
+    margin: auto 5rem;
 }
