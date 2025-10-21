@@ -1,10 +1,42 @@
+h1, h2, h3, p {
+    color: #30323D;
+}
+
+body {
+    background-color: #66999B;
+}
+
 #intro img{
-    width: 10rem;
+    width: 25rem;
     border-radius: 30%;
 }
 
 #intro {
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    margin: 5rem auto auto auto;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#experience-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.experience-info h3{
+    display: flex;
+    justify-content: space-around;
+}
+
+.experience-info p {
+    display: flex;
+    justify-content: space-around;
+}
+
+#about {
+
 }
