@@ -1,11 +1,12 @@
-h1, h2, h3, p {
-    color: #30323D;
-}
-
 body {
-    background-color: #66999B;
+    background-image: linear-gradient(to top,#0D1F22, #2892D7);
+    font-family: 'Courier New', Courier, monospace;
+    color: #E5F4E3;
 }
 
+hr {
+    margin: 5rem;
+}
 #intro img{
     width: 25rem;
     border-radius: 30%;
@@ -22,21 +23,25 @@ h2 {
     justify-content: center;
 }
 
-#experience-list {
+#experience-list, #hobby-list {
     display: flex;
     justify-content: space-around;
 }
 
-.experience-info h3{
+.experience-info h3, .hobby-info h4{
     display: flex;
     justify-content: space-around;
 }
 
-.experience-info p {
+.experience-info p, .hobby-info p {
     display: flex;
     justify-content: space-around;
 }
 
+#hobby-list h3 {
+    display: flex;
+    justify-content: center;
+}
 #about {
 
 }
