@@ -1,60 +1,254 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: linear-gradient(to top, #0D1F22, #2892D7);
-    font-family: 'Gill Sans', Courier, monospace;
-    color: #E5F4E3;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-hr {
-    margin: 2rem auto;
-    width: 50%;
-    color: #E5F4E3;
-    border-radius: 100%;
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
-a {
-    font-family: 'Gill Sans', Courier, monospace;
-    font-size: 1.5rem;
-    text-decoration: none;
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-a:hover {
-    color: #E5F4E3;
-    cursor: pointer;
-}
-
-#intro {
-    margin-top: 2rem;
+nav ul {
+    list-style: none;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main Content Container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 2rem 2rem;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
 }
 
 #intro h1 {
-    margin-left: 5rem;
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
 }
 
 #intro img {
-    width: 25rem;
-    border-radius: 10%;
-    border: 0.5rem groove #0D1F22;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 20%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-out;
 }
 
-#experience-list, #hobby-list {
+/* Contact Links */
+#contact {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
     flex-wrap: wrap;
 }
 
-.hobby-info, .experience-info {
-    width: 20rem;
+#contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.hobby-info h4, .experience-info h3 {
+#contact a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Experience List */
+#experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-info h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-#about p {
-    margin: auto 5rem;
+.experience-info p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* About Section */
+#about {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#about > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+#about h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Hobby List */
+#hobby-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.hobby-info {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.hobby-info h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.hobby-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    margin: 3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #intro h1 {
+        font-size: 2rem;
+    }
+    
+    #intro img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    #experience-list,
+    #hobby-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 70px 1rem 1rem;
+    }
+    
+    #intro h1 {
+        font-size: 1.75rem;
+    }
+    
+    #contact {
+        flex-direction: column;
+    }
+    
+    #contact a {
+        justify-content: center;
+    }
 }
